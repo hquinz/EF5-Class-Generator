@@ -5,7 +5,7 @@ EF5-Class-Generator
 Autor: Pablo Javier Cieri
 Developer (App, Games, Interactive Apps), Autodidact, Gamer, Geek, Asimov Fan, Technology Junkie.
 Forked by Helmut Quinz (PLC - programming),
-Mainlynly to improve UI
+Mainly to improve UI
 
 
 
