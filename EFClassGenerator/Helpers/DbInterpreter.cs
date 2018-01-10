@@ -173,7 +173,7 @@ namespace EFClassGenerator.Helpers
                 if (!writeClassOk || !writeMapperOk) { return false; }
             }
 
-            return false;
+            return true;
         }
 
         private bool SearchSynonyms(IEnumerable<ObjectDB> listSynonyms, SetState setState)

@@ -91,6 +91,8 @@ namespace EFClassGenerator
         private void btnGenerate_MouseUp(object sender, MouseEventArgs e)
         {
             _dbInterpreter.FilePath = tbTargetPath.Text;
+            _dbInterpreter.NameSpaceClasses = tbNamespaceProjekt.Text + "." + tbExtensionClasses.Text;
+            _dbInterpreter.NameSpaceConfig = tbNamespaceProjekt.Text + "." + tbExtensionConfig.Text;
             _dbInterpreter.GenerateClassFiles(clbTables.CheckedItems.Cast<DataRowView>(), SetState);
             MessageBox.Show(@"Done");
 
@@ -127,7 +129,7 @@ namespace EFClassGenerator
             
         }
 
-        private string GetTextFromComboBox(ComboBox combobox)
+        private string GetTextFromComboBox(ListControl combobox)
         {
             return string.IsNullOrEmpty(combobox.Text) ? combobox.SelectedValue?.ToString() : combobox.Text;
         }
@@ -162,12 +164,13 @@ namespace EFClassGenerator
         }
 
 
- 
+
+
+
 
         #endregion Private Methods
 
-
-
+      
     }
 
 

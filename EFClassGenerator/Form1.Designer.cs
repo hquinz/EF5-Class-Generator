@@ -37,10 +37,10 @@
             this.clbTables = new System.Windows.Forms.CheckedListBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.txtNamespaceClasses = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNamespaceConfig = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.tbExtensionClasses = new System.Windows.Forms.TextBox();
+            this.lblExtensionClasses = new System.Windows.Forms.Label();
+            this.tbExtensionConfig = new System.Windows.Forms.TextBox();
+            this.lblExtensionConfig = new System.Windows.Forms.Label();
             this.comboBoxHosts = new System.Windows.Forms.ComboBox();
             this.btnServerListRefresh = new System.Windows.Forms.Button();
             this.cbWindowsAuthentication = new System.Windows.Forms.CheckBox();
@@ -52,6 +52,8 @@
             this.bOpenFileDialog = new System.Windows.Forms.Button();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelMain = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblNamespaceProjekt = new System.Windows.Forms.Label();
+            this.tbNamespaceProjekt = new System.Windows.Forms.TextBox();
             this.statusStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,7 +137,7 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(525, 641);
+            this.btnGenerate.Location = new System.Drawing.Point(742, 672);
             this.btnGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(100, 28);
@@ -144,43 +146,43 @@
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnGenerate_MouseUp);
             // 
-            // txtNamespaceClasses
+            // tbExtensionClasses
             // 
-            this.txtNamespaceClasses.Location = new System.Drawing.Point(160, 619);
-            this.txtNamespaceClasses.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNamespaceClasses.Name = "txtNamespaceClasses";
-            this.txtNamespaceClasses.Size = new System.Drawing.Size(303, 22);
-            this.txtNamespaceClasses.TabIndex = 11;
-            this.txtNamespaceClasses.Text = "Namespace.Mapping";
+            this.tbExtensionClasses.Location = new System.Drawing.Point(237, 678);
+            this.tbExtensionClasses.Margin = new System.Windows.Forms.Padding(4);
+            this.tbExtensionClasses.Name = "tbExtensionClasses";
+            this.tbExtensionClasses.Size = new System.Drawing.Size(303, 22);
+            this.tbExtensionClasses.TabIndex = 11;
+            this.tbExtensionClasses.Text = "Mapping";
             // 
-            // label5
+            // lblExtensionClasses
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 622);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 16);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Namespace Mapping";
+            this.lblExtensionClasses.AutoSize = true;
+            this.lblExtensionClasses.Location = new System.Drawing.Point(94, 681);
+            this.lblExtensionClasses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExtensionClasses.Name = "lblExtensionClasses";
+            this.lblExtensionClasses.Size = new System.Drawing.Size(122, 16);
+            this.lblExtensionClasses.TabIndex = 15;
+            this.lblExtensionClasses.Text = "Extension Mapping";
             // 
-            // txtNamespaceConfig
+            // tbExtensionConfig
             // 
-            this.txtNamespaceConfig.Location = new System.Drawing.Point(160, 650);
-            this.txtNamespaceConfig.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNamespaceConfig.Name = "txtNamespaceConfig";
-            this.txtNamespaceConfig.Size = new System.Drawing.Size(303, 22);
-            this.txtNamespaceConfig.TabIndex = 10;
-            this.txtNamespaceConfig.Text = "Namespace.Config";
+            this.tbExtensionConfig.Location = new System.Drawing.Point(237, 648);
+            this.tbExtensionConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.tbExtensionConfig.Name = "tbExtensionConfig";
+            this.tbExtensionConfig.Size = new System.Drawing.Size(303, 22);
+            this.tbExtensionConfig.TabIndex = 10;
+            this.tbExtensionConfig.Text = "Config";
             // 
-            // label6
+            // lblExtensionConfig
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 653);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 16);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Namespace Config";
+            this.lblExtensionConfig.AutoSize = true;
+            this.lblExtensionConfig.Location = new System.Drawing.Point(94, 651);
+            this.lblExtensionConfig.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExtensionConfig.Name = "lblExtensionConfig";
+            this.lblExtensionConfig.Size = new System.Drawing.Size(107, 16);
+            this.lblExtensionConfig.TabIndex = 17;
+            this.lblExtensionConfig.Text = "Extension Config";
             // 
             // comboBoxHosts
             // 
@@ -265,7 +267,7 @@
             // 
             this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelMain});
-            this.statusStripMain.Location = new System.Drawing.Point(0, 701);
+            this.statusStripMain.Location = new System.Drawing.Point(0, 707);
             this.statusStripMain.Name = "statusStripMain";
             this.statusStripMain.Size = new System.Drawing.Size(855, 22);
             this.statusStripMain.TabIndex = 18;
@@ -277,11 +279,30 @@
             this.toolStripStatusLabelMain.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabelMain.Text = "toolStripStatusLabel1";
             // 
+            // lblNamespaceProjekt
+            // 
+            this.lblNamespaceProjekt.AutoSize = true;
+            this.lblNamespaceProjekt.Location = new System.Drawing.Point(17, 621);
+            this.lblNamespaceProjekt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNamespaceProjekt.Name = "lblNamespaceProjekt";
+            this.lblNamespaceProjekt.Size = new System.Drawing.Size(128, 16);
+            this.lblNamespaceProjekt.TabIndex = 15;
+            this.lblNamespaceProjekt.Text = "Namespace Projekt";
+            // 
+            // tbNamespaceProjekt
+            // 
+            this.tbNamespaceProjekt.Location = new System.Drawing.Point(160, 618);
+            this.tbNamespaceProjekt.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNamespaceProjekt.Name = "tbNamespaceProjekt";
+            this.tbNamespaceProjekt.Size = new System.Drawing.Size(303, 22);
+            this.tbNamespaceProjekt.TabIndex = 11;
+            this.tbNamespaceProjekt.Text = "Namespace";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 723);
+            this.ClientSize = new System.Drawing.Size(855, 729);
             this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.bOpenFileDialog);
             this.Controls.Add(this.tbTargetPath);
@@ -290,11 +311,13 @@
             this.Controls.Add(this.cbWindowsAuthentication);
             this.Controls.Add(this.btnServerListRefresh);
             this.Controls.Add(this.comboBoxHosts);
-            this.Controls.Add(this.txtNamespaceConfig);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtNamespaceClasses);
+            this.Controls.Add(this.tbExtensionConfig);
+            this.Controls.Add(this.lblExtensionConfig);
+            this.Controls.Add(this.tbNamespaceProjekt);
+            this.Controls.Add(this.tbExtensionClasses);
             this.Controls.Add(this.lblTargetPath);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblNamespaceProjekt);
+            this.Controls.Add(this.lblExtensionClasses);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.clbTables);
@@ -325,10 +348,10 @@
         private System.Windows.Forms.CheckedListBox clbTables;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.TextBox txtNamespaceClasses;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNamespaceConfig;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbExtensionClasses;
+        private System.Windows.Forms.Label lblExtensionClasses;
+        private System.Windows.Forms.TextBox tbExtensionConfig;
+        private System.Windows.Forms.Label lblExtensionConfig;
         private System.Windows.Forms.ComboBox comboBoxHosts;
         private System.Windows.Forms.Button btnServerListRefresh;
         private System.Windows.Forms.CheckBox cbWindowsAuthentication;
@@ -340,6 +363,8 @@
         private System.Windows.Forms.Button bOpenFileDialog;
         private System.Windows.Forms.StatusStrip statusStripMain;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMain;
+        private System.Windows.Forms.Label lblNamespaceProjekt;
+        private System.Windows.Forms.TextBox tbNamespaceProjekt;
     }
 }
 
