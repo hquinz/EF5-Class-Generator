@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using WkstStPlan.Mapping;
+using ;
 
-namespace WkstStPlan.Config
+namespace 
 {
     public class tblKlassenLehrfaecherConfig : EntityTypeConfiguration<tblKlassenLehrfaecher>
     {

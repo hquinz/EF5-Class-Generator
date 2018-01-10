@@ -1,23 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
-namespace ClassGenerator.Tools
+namespace EFClassGenerator.Tools
 {
     public class FileManager
     {
         /// <summary>
         /// Return Application path
         /// </summary>
-        public static string GetAppPath
-        {
-            get
-            {
-                return Directory.GetCurrentDirectory();
-            }
-        }
+        public static string GetAppPath => Directory.GetCurrentDirectory();
 
         /// <summary>
         /// Check is Directory exist, else create
@@ -25,9 +16,13 @@ namespace ClassGenerator.Tools
         /// <param name="folderName">full path</param>
         public static void CheckExistOrCreate(string folderName)
         {
-            string tmpUrl = Path.Combine(GetAppPath, folderName);
-            if (!Directory.Exists(tmpUrl))
-                Directory.CreateDirectory(tmpUrl);
+            try
+            {
+                if (!Directory.Exists(folderName))
+                    Directory.CreateDirectory(folderName);
+
+            }
+            catch (Exception e) { throw;}
         }
 
         /// <summary>

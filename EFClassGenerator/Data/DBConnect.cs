@@ -8,10 +8,6 @@ namespace EFClassGenerator.Data
 {
     public class DbConnect
     {
-        private string host = "";
-        private string username = "";
-        private string passowrd = "";
-        private string database = "";
         private string _connectionString;
 
         public string ConnectionString
@@ -30,24 +26,6 @@ namespace EFClassGenerator.Data
 
 
         public DbConnect()         {        }
-
-
-
-        /// <summary>
-        /// Create DB Connect, and set the first parameters to connect with DB.
-        /// </summary>
-        /// <param name="_host">host / server</param>
-        /// <param name="_username">username</param>
-        /// <param name="_password">password</param>
-        /// <param name="_database">database</param>
-        public void Connect(string _host, string _username, string _password, string _database)
-        {
-            host = _host;
-            username = _username;
-            passowrd = _password;
-            database = _database;
-        }
-
         /// <summary>
         /// Check Connection.
         /// </summary>

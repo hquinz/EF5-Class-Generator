@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing.Text;
 using System.Linq;
-using System.Text;
 using ClassGenerator.Data;
 using EFClassGenerator.Data;
 using EFClassGenerator.Tools;
 
 namespace EFClassGenerator.Helpers
 {
-    internal class Worker
+    internal class DbWorker
 
     {
         private readonly DbConnect _dbConnect;
+        private readonly QueryGenerator _queryGenerator;
+
 
         internal delegate void SetState(string state);
         internal string Server { private get; set; }
@@ -23,9 +23,11 @@ namespace EFClassGenerator.Helpers
         internal string Catalog { private get; set; }
         
 
-        internal Worker(DbConnect dbConnect)
+        internal DbWorker(DbConnect dbConnect, QueryGenerator queryGenerator)
         {
             this._dbConnect = dbConnect;
+            this._queryGenerator = queryGenerator;
+
         }
 
 
@@ -64,8 +66,14 @@ namespace EFClassGenerator.Helpers
             }
 
             _dbConnect.ConnectionString = connectionData.ConnectionString;
-            var dt = _dbConnect.OpenConnectionAndExecute(SQLQuery.GetTablesAndSynonyms);
-            if (dt == null) setState(@"Didn't find any Tabel: " + connectionData.State);
+            var dt = _dbConnect.OpenConnectionAndExecute(_queryGenerator.GetTablesAndSynonyms);
+            if (dt == null)
+            {
+                setState(@"Didn't find any Tabel: " + connectionData.State);
+                return null;
+            }
+
+            setState($@"{dt.Rows.Count} Tabels Found");
             return dt;
         }
 
